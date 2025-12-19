@@ -2,7 +2,7 @@ package user
 
 import (
 	"context"
-	"golang-bulang-bolang/src/domain"
+	"learngolang/src/domain"
 
 	"github.com/rs/zerolog"
 )

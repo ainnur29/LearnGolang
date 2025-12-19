@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"golang-bulang-bolang/src/preference"
+	"learngolang/src/preference"
 
 	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"

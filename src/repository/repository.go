@@ -3,8 +3,8 @@ package repository
 import (
 	"time"
 
-	"golang-bulang-bolang/src/config"
-	"golang-bulang-bolang/src/repository/user"
+	"learngolang/src/config"
+	"learngolang/src/repository/user"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/redis/go-redis/v9"

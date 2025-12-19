@@ -1,8 +1,8 @@
 package rest
 
 import (
-	"golang-bulang-bolang/src/config"
-	"golang-bulang-bolang/src/service"
+	"learngolang/src/config"
+	"learngolang/src/service"
 	"sync"
 
 	"github.com/gin-gonic/gin"

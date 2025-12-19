@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"golang-bulang-bolang/src/domain"
-	exception "golang-bulang-bolang/src/errors"
+	"learngolang/src/domain"
+	exception "learngolang/src/errors"
 
 	"github.com/rs/zerolog"
 )

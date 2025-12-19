@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
-	"golang-bulang-bolang/src/config"
+	"learngolang/src/config"
 	"os"
 
 	"github.com/goccy/go-yaml"
 	"github.com/stretchr/testify/assert/yaml"
-	"golang.org/x/tools/go/analysis/passes/nilfunc"
 )
 
 type Config struct {

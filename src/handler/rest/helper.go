@@ -1,7 +1,7 @@
 package rest
 
 import (
-	exception "golang-bulang-bolang/src/errors"
+	exception "learngolang/src/errors"
 
 	"github.com/gin-gonic/gin"
 )

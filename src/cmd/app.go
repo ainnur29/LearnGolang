@@ -2,25 +2,25 @@ package main
 
 import (
 	"flag"
-	"golang-bulang-bolang/src/config"
-	"golang-bulang-bolang/src/preference"
-	"golang-bulang-bolang/src/repository"
-	"golang-bulang-bolang/src/service"
-	"golang-bulang-bolang/src/util"
-	
+	"learngolang/src/config"
+	"learngolang/src/repository"
+	"learngolang/src/service"
+	"learngolang/src/util"
+
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
 	"github.com/redis/go-redis/v9"
 )
 
 var (
-	minJitter    int
-	maxJitter    int
-	sqlClient0   *sqlx.DB
-	redisClient0 *redis.Client
-	redisClient1 *redis.Client
-	redisClient2 *redis.Client
-	app          config.App
+	minJitter int
+	maxJitter int
+	sql0      *sqlx.DB
+	redis0    *redis.Client
+	redis1    *redis.Client
+	redis2    *redis.Client
+	scheduler *config.Scheduler
+	app       config.App
 )
 
 func init() {
@@ -76,10 +76,26 @@ func init() {
 
 func main() {
 	defer func() {
-		if sqlClient0 != nil {
-			sqlClient0.Close()
+		if redis0 != nil {
+			redis0.Close()
 		}
-	}
+
+		if redis1 != nil {
+			redis1.Close()
+		}
+
+		if redis2 != nil {
+			redis2.Close()
+		}
+
+		if sql0 != nil {
+			sql0.Close()
+		}
+
+		if scheduler != nil {
+			scheduler.Stop()
+		}
+	}()
 
 	app.Serve()
 }

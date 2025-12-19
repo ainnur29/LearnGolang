@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"golang-bulang-bolang/src/preference"
+	"learngolang/src/preference"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/rs/zerolog"

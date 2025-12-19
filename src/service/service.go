@@ -1,8 +1,8 @@
 package service
 
 import (
-	"golang-bulang-bolang/src/repository"
-	"golang-bulang-bolang/src/service/user"
+	"learngolang/src/repository"
+	"learngolang/src/service/user"
 )
 
 type Service struct {

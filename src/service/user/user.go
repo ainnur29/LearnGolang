@@ -3,8 +3,8 @@ package user
 import (
 	"context"
 
-	"golang-bulang-bolang/src/domain"
-	"golang-bulang-bolang/src/repository/user"
+	"learngolang/src/domain"
+	"learngolang/src/repository/user"
 )
 
 type UserServiceItf interface {

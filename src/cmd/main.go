@@ -1,5 +1,10 @@
 package main
 
+import (
+	"math/rand"
+	"time"
+)
+
 const (
 	DefaultMaxJitter = 2000
 	DefaultMinJitter = 100

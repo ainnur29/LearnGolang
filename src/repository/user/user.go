@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"golang-bulang-bolang/src/config"
-	"golang-bulang-bolang/src/domain"
+	"learngolang/src/config"
+	"learngolang/src/domain"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/redis/go-redis/v9"
