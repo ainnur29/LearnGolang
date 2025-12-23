@@ -6,3 +6,43 @@
 {"level":"panic","error":"open /user_queries.sql: no such file or directory","time":"2025-12-23T10:50:31+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/cmd/app.go:56","message":"Failed to load queries"}
 {"level":"debug","time":"2025-12-23T11:08:50+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
 {"level":"panic","error":"open /user_queries.sql: no such file or directory","time":"2025-12-23T11:08:50+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/cmd/app.go:56","message":"Failed to load queries"}
+{"level":"debug","time":"2025-12-23T11:59:03+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
+{"level":"panic","error":"open /user_queries.sql: no such file or directory","time":"2025-12-23T11:59:03+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/cmd/app.go:56","message":"Failed to load queries"}
+{"level":"debug","time":"2025-12-23T12:00:41+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
+{"level":"panic","error":"open /user_queries.sql: no such file or directory","time":"2025-12-23T12:00:41+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/cmd/app.go:56","message":"Failed to load queries"}
+{"level":"debug","time":"2025-12-23T12:03:48+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
+{"level":"info","count":8,"time":"2025-12-23T12:03:48+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/query.go:63","message":"Queries loaded successfully"}
+{"level":"debug","time":"2025-12-23T12:03:48+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/validator.go:19","message":"Custom password validator loaded successfully"}
+{"level":"panic","error":"open : no such file or directory","time":"2025-12-23T12:03:48+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/auth.go:67"}
+{"level":"debug","time":"2025-12-23T12:04:54+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
+{"level":"info","count":8,"time":"2025-12-23T12:04:54+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/query.go:63","message":"Queries loaded successfully"}
+{"level":"debug","time":"2025-12-23T12:04:54+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/validator.go:19","message":"Custom password validator loaded successfully"}
+{"level":"debug","time":"2025-12-23T12:04:54+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:73","message":"Starting HTTP server..."}
+{"level":"debug","time":"2025-12-23T12:04:54+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:74","message":"HTTP server start on :8080"}
+{"level":"info","event":"START","req_id":"d55263ebs4047gl24l0g","method":"GET","url":"/favicon.ico","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0","addr":"localhost:8080","time":"2025-12-23T12:05:17+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/middleware.go:85"}
+{"level":"info","event":"END","req_id":"d55263ebs4047gl24l0g","latency":"149.632µs","status_code":404,"time":"2025-12-23T12:05:17+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/middleware.go:107"}
+{"level":"debug","time":"2025-12-23T12:06:12+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:57","message":"Gracefully shutting down HTTP server..."}
+{"level":"debug","time":"2025-12-23T12:06:12+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:84","message":"HTTP server started..."}
+{"level":"debug","time":"2025-12-23T12:06:12+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:87","message":"Shutting down HTTP server gracefully..."}
+{"level":"debug","time":"2025-12-23T12:06:12+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:96","message":"HTTP server stopped."}
+{"level":"debug","time":"2025-12-23T12:06:12+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:65","message":"Shutdown complete."}
+{"level":"debug","time":"2025-12-23T12:06:20+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
+{"level":"info","count":8,"time":"2025-12-23T12:06:20+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/query.go:63","message":"Queries loaded successfully"}
+{"level":"debug","time":"2025-12-23T12:06:20+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/validator.go:19","message":"Custom password validator loaded successfully"}
+{"level":"debug","time":"2025-12-23T12:06:20+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:73","message":"Starting HTTP server..."}
+{"level":"debug","time":"2025-12-23T12:06:20+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:74","message":"HTTP server start on :8080"}
+{"level":"debug","time":"2025-12-23T12:07:29+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:57","message":"Gracefully shutting down HTTP server..."}
+{"level":"debug","time":"2025-12-23T12:07:29+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:84","message":"HTTP server started..."}
+{"level":"debug","time":"2025-12-23T12:07:29+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:87","message":"Shutting down HTTP server gracefully..."}
+{"level":"debug","time":"2025-12-23T12:07:29+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:96","message":"HTTP server stopped."}
+{"level":"debug","time":"2025-12-23T12:07:29+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:65","message":"Shutdown complete."}
+{"level":"debug","time":"2025-12-23T12:07:50+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
+{"level":"info","count":8,"time":"2025-12-23T12:07:50+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/query.go:63","message":"Queries loaded successfully"}
+{"level":"debug","time":"2025-12-23T12:07:50+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/validator.go:19","message":"Custom password validator loaded successfully"}
+{"level":"debug","time":"2025-12-23T12:07:50+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:73","message":"Starting HTTP server..."}
+{"level":"debug","time":"2025-12-23T12:07:50+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:74","message":"HTTP server start on :8080"}
+{"level":"debug","time":"2025-12-23T13:07:39+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:57","message":"Gracefully shutting down HTTP server..."}
+{"level":"debug","time":"2025-12-23T13:07:39+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:84","message":"HTTP server started..."}
+{"level":"debug","time":"2025-12-23T13:07:39+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:87","message":"Shutting down HTTP server gracefully..."}
+{"level":"debug","time":"2025-12-23T13:07:39+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:96","message":"HTTP server stopped."}
+{"level":"debug","time":"2025-12-23T13:07:39+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/grace.go:65","message":"Shutdown complete."}
