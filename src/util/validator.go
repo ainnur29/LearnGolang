@@ -1,16 +1,37 @@
 package util
 
-import (
-	"github.com/gin-gonic/gin/binding"
-	"github.com/go-playground/validator/v10"
-)
+const maxLimit, defaultLimit int64 = 1e4, 10
 
-func Validator() {
-	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
-		_ = v.RegisterValidation("custom", customValidator)
+func ValidateLimit(limit int64) int64 {
+	if limit < 1 {
+		return defaultLimit
+	} else if limit > maxLimit {
+		return maxLimit
 	}
+
+	return limit
 }
 
-func customValidator(fl validator.FieldLevel) bool {
-	return true
+func ValidatePage(page int64) int64 {
+	if page < 1 {
+		return 0
+	}
+
+	return page
+}
+
+func ValidateSortBy(sort string) string {
+	if sort == "" {
+		return "name"
+	}
+
+	return sort
+}
+
+func ValidateSortDir(sort string) string {
+	if sort == "" {
+		return "ASC"
+	}
+
+	return sort
 }

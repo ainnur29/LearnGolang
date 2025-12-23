@@ -10,7 +10,7 @@ const (
 	DefaultMinJitter = 100
 )
 
-func sleepWithJitter(min int, maax int) {
+func sleepWithJitter(min int, max int) {
 	if min < 1 {
 		min = DefaultMinJitter
 	}

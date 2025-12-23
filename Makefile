@@ -26,7 +26,6 @@ clean: ## Clean build artifacts
 
 swagger: ## Generate swagger documentation
 	@echo "Generating Swagger docs..."
-	@rm -rf ./docs/
 	@(swag fmt -d ./src 2>&1 | grep -v "warning: failed to get package name in dir") || true
 	@(swag init -g ./src/cmd/app.go -o ./docs 2>&1 | grep -v "warning: failed to get package name in dir") || true
 	@echo "Fixing generated docs (removing LeftDelim/RightDelim)..."

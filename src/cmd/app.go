@@ -3,9 +3,12 @@ package main
 import (
 	"flag"
 	"learngolang/src/config"
+	restHandler "learngolang/src/handler/rest"
+
+	// schedHandler "learngolang/src/handler/scheduler"
+	"learngolang/src/preference"
 	"learngolang/src/repository"
 	"learngolang/src/service"
-	"learngolang/src/util"
 
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
@@ -40,7 +43,12 @@ func init() {
 	log := config.InitLogger(conf.Logger)
 
 	// SQL Initialization
-	sqlClient0 = config.InitDB(log, conf.Postgres)
+	sql0 = config.InitDB(log, conf.Postgres)
+
+	// Redis Initialization
+	redis0 = config.InitRedis(log, conf.Redis, preference.REDIS_APPS)
+	redis1 = config.InitRedis(log, conf.Redis, preference.REDIS_AUTH)
+	redis2 = config.InitRedis(log, conf.Redis, preference.REDIS_LIMITER)
 
 	// Query Loader Initialization
 	queryLoader, err := config.InitQueryLoader(log, conf.Queries)
@@ -49,23 +57,27 @@ func init() {
 	}
 
 	// Initialize dependencies
-	repository := repository.InitRepository(sqlClient0, redisClient0, queryLoader, conf.Redis.CacheTTL)
+	repository := repository.InitRepository(sql0, redis0, queryLoader, conf.Redis.CacheTTL)
 	service := service.InitService(repository)
 
 	// Initialize validator
-	util.Validator()
+	config.InitValidator(log)
 
 	// Auth Initialization
-	auth := config.InitAuth(log, conf.Auth, redisClient1)
+	auth := config.InitAuth(log, conf.Auth, redis1)
 
 	// Middleware Initialization
-	middleware := config.InitMiddleware(log, auth, redisClient2)
+	middleware := config.InitMiddleware(log, auth, redis2)
 
 	// HTTP Gin Initialization
 	httpGin := config.InitHttpGin(log, middleware)
 
 	// REST Handler Initialization
-	resthandler.InitRestHandler(httpGin, auth, middleware, service)
+	restHandler.InitRestHandler(httpGin, auth, middleware, service)
+
+	// //Scheduler Initialization
+	// scheduler = config.InitScheduler(log, conf.Scheduler)
+	// schedHandler.InitSchedulerHandler(log, scheduler, service, conf.Scheduler.SchedulerJobs)
 
 	// HTTP Server Initialization
 	httpServer := config.InitHttpServer(log, conf.Server, httpGin)

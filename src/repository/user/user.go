@@ -6,30 +6,31 @@ import (
 
 	"learngolang/src/config"
 	"learngolang/src/domain"
+	"learngolang/src/dto"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/redis/go-redis/v9"
 )
 
 type UserRepositoryItf interface {
-	Create(ctx context.Context, user *domain.User) error
-	FindByID(ctx context.Context, id int64) (*domain.User, error)
-	FindAll(ctx context.Context, filter domain.UserFilter) ([]*domain.User, int64, error)
-	Update(ctx context.Context, id int64, user *domain.User) error
-	Delete(ctx context.Context, id int64) error
+	Create(ctx context.Context, user *domain.User) (*domain.User, error)
+	FindByID(ctx context.Context, id string) (domain.User, error)
+	FindAll(ctx context.Context, cacheControl dto.CacheControl, filter dto.UserFilter) ([]domain.User, dto.Pagination, error)
+	Update(ctx context.Context, id string, user domain.User) error
+	Delete(ctx context.Context, id string) error
 }
 
 type userRepository struct {
-	db          *sqlx.DB
-	redis       *redis.Client
+	sql0        *sqlx.DB
+	redis0      *redis.Client
 	queryLoader *config.QueryLoader
 	cacheTTL    time.Duration
 }
 
-func InitUserRepository(db *sqlx.DB, redis *redis.Client, queryLoader *config.QueryLoader, cacheTTL time.Duration) UserRepositoryItf {
+func InitUserRepository(sql0 *sqlx.DB, redis0 *redis.Client, queryLoader *config.QueryLoader, cacheTTL time.Duration) UserRepositoryItf {
 	return &userRepository{
-		db:          db,
-		redis:       redis,
+		sql0:        sql0,
+		redis0:      redis0,
 		queryLoader: queryLoader,
 		cacheTTL:    cacheTTL,
 	}

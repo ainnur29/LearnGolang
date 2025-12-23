@@ -6,7 +6,6 @@ import (
 	"os"
 
 	"github.com/goccy/go-yaml"
-	"github.com/stretchr/testify/assert/yaml"
 )
 
 type Config struct {
