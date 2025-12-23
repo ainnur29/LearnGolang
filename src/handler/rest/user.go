@@ -12,18 +12,6 @@ import (
 	"github.com/rs/zerolog"
 )
 
-// CreateUser godoc
-//
-//	@Summary		Create a new user
-//	@Description	Create a new user with the provided information
-//	@Tags			users
-//	@Accept			json
-//	@Produce		json
-//	@Param			user	body		domain.CreateUserRequest	true	"User data"
-//	@Success		201		{object}	domain.Response{data=domain.User}
-//	@Failure		400		{object}	domain.Response
-//	@Failure		500		{object}	domain.Response
-//	@Router			/users [post]
 func (r *rest) CreateUser(c *gin.Context) {
 	ctx := c.Request.Context()
 	var req dto.CreateUserRequest
@@ -43,17 +31,6 @@ func (r *rest) CreateUser(c *gin.Context) {
 	r.httpRespSuccess(c, http.StatusCreated, user, nil)
 }
 
-// GetUser godoc
-//
-//	@Summary		Get user by ID
-//	@Description	Get a user by their ID
-//	@Tags			users
-//	@Produce		json
-//	@Param			id	path		int	true	"User ID"
-//	@Success		200	{object}	domain.Response{data=domain.User}
-//	@Failure		404	{object}	domain.Response
-//	@Failure		500	{object}	domain.Response
-//	@Router			/users/{id} [get]
 func (r *rest) GetUser(c *gin.Context) {
 	ctx := c.Request.Context()
 
@@ -73,24 +50,6 @@ func (r *rest) GetUser(c *gin.Context) {
 	r.httpRespSuccess(c, http.StatusOK, user, nil)
 }
 
-// ListUsers godoc
-//
-//	@Summary		List users
-//	@Description	Get a paginated list of users with optional filters
-//	@Tags			users
-//	@Produce		json
-//	@Param			name		query		string	false	"Filter by name"
-//	@Param			email		query		string	false	"Filter by email"
-//	@Param			min_age		query		int		false	"Minimum age"
-//	@Param			max_age		query		int		false	"Maximum age"
-//	@Param			page		query		int		false	"Page number"	default(1)
-//	@Param			page_size	query		int		false	"Page size"		default(10)
-//	@Param			sort_by		query		string	false	"Sort by field"
-//	@Param			sort_dir	query		string	false	"Sort direction (asc/desc)"	default(asc)
-//	@Success		200			{object}	domain.PaginatedResponse{data=[]domain.User}
-//	@Failure		400			{object}	domain.Response
-//	@Failure		500			{object}	domain.Response
-//	@Router			/users [get]
 func (e *rest) ListUsers(c *gin.Context) {
 	ctx := c.Request.Context()
 
@@ -118,20 +77,6 @@ func (e *rest) ListUsers(c *gin.Context) {
 	e.httpRespSuccess(c, http.StatusOK, users, &pagination)
 }
 
-// UpdateUser godoc
-//
-//	@Summary		Update user
-//	@Description	Update an existing user
-//	@Tags			users
-//	@Accept			json
-//	@Produce		json
-//	@Param			id		path		int							true	"User ID"
-//	@Param			user	body		domain.UpdateUserRequest	true	"User data"
-//	@Success		200		{object}	domain.Response{data=domain.User}
-//	@Failure		400		{object}	domain.Response
-//	@Failure		404		{object}	domain.Response
-//	@Failure		500		{object}	domain.Response
-//	@Router			/users/{id} [put]
 func (e *rest) UpdateUser(c *gin.Context) {
 	ctx := c.Request.Context()
 
@@ -158,17 +103,6 @@ func (e *rest) UpdateUser(c *gin.Context) {
 	e.httpRespSuccess(c, http.StatusOK, user, nil)
 }
 
-// DeleteUser godoc
-//
-//	@Summary		Delete user
-//	@Description	Delete a user by ID
-//	@Tags			users
-//	@Produce		json
-//	@Param			id	path		int	true	"User ID"
-//	@Success		200	{object}	domain.Response
-//	@Failure		404	{object}	domain.Response
-//	@Failure		500	{object}	domain.Response
-//	@Router			/users/{id} [delete]
 func (e *rest) DeleteUser(c *gin.Context) {
 	ctx := c.Request.Context()
 

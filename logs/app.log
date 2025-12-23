@@ -2,3 +2,7 @@
 {"level":"panic","error":"open /user_queries.sql: no such file or directory","time":"2025-12-22T15:28:31+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/cmd/app.go:56","message":"Failed to load queries"}
 {"level":"debug","time":"2025-12-22T15:29:29+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
 {"level":"panic","error":"open /user_queries.sql: no such file or directory","time":"2025-12-22T15:29:29+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/cmd/app.go:56","message":"Failed to load queries"}
+{"level":"debug","time":"2025-12-23T10:50:31+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
+{"level":"panic","error":"open /user_queries.sql: no such file or directory","time":"2025-12-23T10:50:31+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/cmd/app.go:56","message":"Failed to load queries"}
+{"level":"debug","time":"2025-12-23T11:08:50+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/config/database.go:45","message":"POSTGRES status: OK"}
+{"level":"panic","error":"open /user_queries.sql: no such file or directory","time":"2025-12-23T11:08:50+07:00","caller":"/media/muhammad/DATA R/project/learn/golang/LearnGolang/src/cmd/app.go:56","message":"Failed to load queries"}
